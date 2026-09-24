@@ -194,9 +194,9 @@ public class Program
     {
         Academia academia = new Academia();
 
-        Aluno aluno1 = new Aluno("Ryan", "123.169.426-48", 40.5m);
+        Aluno aluno1 = new Aluno("Gabriel", "133.256.723-21", 40.5m);
 
-        Aluno aluno2 = new Aluno("Lukas", "123.168.423-48", 50.5m);
+        Aluno aluno2 = new Aluno("Nathan", "176.149.659-18", 50.5m);
 
         Plano planoMensal = new Plano("Mensal", 100.00m);
 
@@ -212,28 +212,28 @@ public class Program
 
         Matricula matricula2 = academia.MatricularAluno( aluno2, planoAnual, DateTime.Now);
 
-        PersonalTrainer personalTrainer =new PersonalTrainer( "Rogerio", "123.169.429-48");
+        PersonalTrainer personalTrainer =new PersonalTrainer( "Dafne", "191.069.487-38");
 
         academia.CadastrarPersonalTrainer(personalTrainer);
 
-        Console.WriteLine("--- ALUNOS CADASTRADOS ---");
+        Console.WriteLine("///- ALUNOS CADASTRADOS -///");
 
         List<Aluno> alunos = academia.ListarAlunos();
 
         foreach (Aluno aluno in alunos)
         {
-            Console.WriteLine("Nome: " + aluno.Nome + " - CPF: " + aluno.Cpf + " - Peso: " + aluno.Peso + " kg");
+            Console.WriteLine("NOME: " + aluno.Nome + " - CPF: " + aluno.Cpf + " - PESO: " + aluno.Peso + " KG");
         }
 
         Console.WriteLine();
-        Console.WriteLine("--- MATRÍCULAS ---");
+        Console.WriteLine("///- MATRÍCULAS -///");
 
         List<Matricula> matriculas =
             academia.ListarMatriculas();
 
         foreach (Matricula matricula in matriculas)
         {
-            Console.WriteLine("Aluno: " + matricula.Aluno.Nome + " - Plano: " + matricula.Plano.Nome);
+            Console.WriteLine("ALUNO: " + matricula.Aluno.Nome + " - PLANO: " + matricula.Plano.Nome);
         }
     }
 }
