@@ -12,17 +12,27 @@ public class Aluno
         cpf = CPF;
         peso = Peso;
     }
+
 }
 
 /*public class PersonalTrainer
 {
     
-}
+}*/
 
 public class Matricula
 {
-    //talvez eu seja burro senhor
-}*/
+    Aluno aluno{get; private set;}
+    Plano plano{get; private set;}
+    DateTime dataInicio{get; private set;}
+
+    public Matricula(Aluno aluno, Plano plano, DateTime dataInicio)
+    {
+        this.aluno = aluno;
+        this.plano = plano;
+        this.dataInicio = dataInicio;
+    }
+}
 
 public class Plano
 {
@@ -36,5 +46,5 @@ public class Plano
         this.trimensal = trimensal;
         this.anual = anual;
     }
-    //favor ver depois, nao vai dar de fazer essa parte ainda
+    
 }
