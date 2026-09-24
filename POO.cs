@@ -2,9 +2,9 @@ using System;
 
 public class Aluno
 {
-    private string nome {get; private set;}
-    private string cpf {get; private set;}
-    private decimal peso {get; private set;}
+    public string nome {get; private set;}
+    public string cpf {get; private set;}
+    public decimal peso {get; private set;}
 
     public Aluno(string Nome, string CPF, decimal Peso)
     {
@@ -15,10 +15,16 @@ public class Aluno
 
 }
 
-/*public class PersonalTrainer
+public class PersonalTrainer
 {
-    
-}*/
+    public string nome {get; private set;}
+    public string cpf {get; private set;}
+    public PersonalTrainer(string Nome, string CPF)
+    {
+        nome = Nome;
+        cpf = CPF;
+    }
+}
 
 public class Matricula
 {
@@ -36,10 +42,9 @@ public class Matricula
 
 public class Plano
 {
-    private decimal mensal {get; private set;}
-    private decimal trimensal {get; private set;}
-    private decimal anual {get; private set;}
-
+    public decimal ValorMensalidade {get; private set;}
+    public string nomePlano {get; private set;}
+    
     public Plano(decimal mensal, decimal trimensal, decimal anual)
     {
         this.mensal = mensal;
